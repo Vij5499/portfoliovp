@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium CI/CD Framework | Vijeth Patil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary': '#E14434', // Warm Coral
+                        'primary-dark': '#c93c2d', // Darker Coral
+                        'light-bg': '#F9F3EF', // Creamy White
+                        'light-card': '#ffffff', // White
+                        'section-bg': '#fdfaf7', // Slightly off-white for sections
+                        'dark-text': '#1B3C53', // Deep Navy
+                        'sub-text': '#456882', // Muted Blue-Gray
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic scrollbar styling for a light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D2C1B6; /* Soft Taupe */
+            border-radius: 10px;
+            border: 2px solid #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #bcaaa4;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-dark-text font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-light-bg/80 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./index.html" class="text-lg font-bold text-dark-text hover:text-primary transition-colors duration-300">
+                &larr; Back to Portfolio
+            </a>
+            <a href="https://github.com/Vij5499/selenium-project" target="_blank" rel="noopener noreferrer" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                GitHub Repo
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <!-- Project Header -->
+        <div class="text-center">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight text-dark-text">
+                Full-Stack Selenium <span class="text-primary">Test Framework</span>
+            </h1>
+            <p class="mt-4 text-lg max-w-3xl mx-auto text-sub-text">
+                A comprehensive, containerized testing framework for the AutomationExercise e-commerce site, featuring a full CI/CD pipeline with UI, API, and Performance tests.
+            </p>
+        </div>
+
+        <!-- Project Image -->
+        <div class="my-12">
+            <img src="https://www.testmo.com/wp-content/uploads/2023/04/YXNzZXRzL2ZlYXR1cmVzL3NlbGVuaXVtLmpwZw-2.jpeg" alt="Abstract image of Java code and network connections" class="w-full rounded-lg shadow-lg">
+        </div>
+
+        <!-- Project Details -->
+        <div class="bg-light-card p-8 md:p-12 rounded-lg shadow-md">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Left Column -->
+                <div class="md:col-span-2">
+                    <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Project Overview</h2>
+                    <p class="text-sub-text mb-4 leading-relaxed">
+                        This project is a complete, end-to-end test automation solution built on a powerful Java and Selenium stack. It is designed to perform multi-layered testing against the `automationexercise.com` platform, validating everything from the UI and APIs to backend performance. The framework is architected for scalability, maintainability, and full integration into a modern DevOps lifecycle.
+                    </p>
+                    <p class="text-sub-text mb-6 leading-relaxed">
+                        A key feature is its full **CI/CD integration using GitHub Actions**. The workflow, defined in `main.yml`, automates the entire testing process. It builds the project, runs the comprehensive test suite (including UI, API, and performance tests) inside a **Docker container**, and generates detailed reports. This ensures that every code change is automatically and thoroughly vetted, providing rapid feedback and maintaining a high standard of quality.
+                    </p>
+                    
+                    <h2 class="font-serif text-2xl font-bold mb-4 mt-8 text-dark-text">Key Features & Implementation</h2>
+                    <ul class="list-disc list-inside text-sub-text space-y-3">
+                        <li>
+                            <strong>CI/CD and DevOps Pipeline:</strong> A GitHub Actions workflow automates the build and test cycle. The entire test environment is containerized using a `Dockerfile`, ensuring consistency and portability.
+                        </li>
+                        <li>
+                            <strong>API Testing with RestAssured:</strong> The framework includes a dedicated API testing layer (`APITests.java`) that uses RestAssured to directly validate backend endpoints, ensuring data integrity and service reliability independent of the UI.
+                        </li>
+                        <li>
+                            <strong>Performance Testing with JMeter:</strong> A JMeter test plan (`GetProducts.jmx`) is integrated into the project to conduct load testing on critical API endpoints, identifying performance bottlenecks under user load.
+                        </li>
+                        <li>
+                            <strong>Data-Driven UI Testing:</strong> The robust UI test suite uses Selenium WebDriver and the Page Object Model (POM). It leverages TestNG's `@DataProvider` and Apache POI to read test cases from external Excel sheets, enabling extensive test coverage with minimal code duplication.
+                        </li>
+                        <li>
+                            <strong>Advanced Reporting and Listeners:</strong> Custom TestNG listeners (`ExtentReporterNG`, `ScreenshotListener`) are used to generate detailed ExtentReports. These reports include step-by-step logs and automatically attach screenshots for any failed test, facilitating rapid debugging.
+                        </li>
+                        <li>
+                            <strong>Thread-Safe Parallel Execution:</strong> A custom `DriverFactory` uses `ThreadLocal` to manage WebDriver instances, allowing for safe and efficient parallel execution of UI tests, significantly reducing the overall runtime of the test suite.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column (Sidebar) -->
+                <div class="md:col-span-1">
+                    <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Tools & Technologies</h2>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Java</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Selenium WebDriver</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">TestNG</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Maven</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">RestAssured</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JMeter</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Docker</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">GitHub Actions</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">ExtentReports</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Apache POI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; Copyright <span id="year"></span>. Made by <a href="./index.html" class="text-primary hover:underline">Vijeth Patil</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

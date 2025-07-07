@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA/DevOps Pipeline Project | Vijeth Patil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary': '#E14434', // Warm Coral
+                        'primary-dark': '#c93c2d', // Darker Coral
+                        'light-bg': '#F9F3EF', // Creamy White
+                        'light-card': '#ffffff', // White
+                        'section-bg': '#fdfaf7', // Slightly off-white for sections
+                        'dark-text': '#1B3C53', // Deep Navy
+                        'sub-text': '#456882', // Muted Blue-Gray
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic scrollbar styling for a light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D2C1B6; /* Soft Taupe */
+            border-radius: 10px;
+            border: 2px solid #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #bcaaa4;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-dark-text font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-light-bg/80 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="./index.html" class="text-lg font-bold text-dark-text hover:text-primary transition-colors duration-300">
+                &larr; Back to Portfolio
+            </a>
+            <a href="https://github.com/Vij5499/Playwright" target="_blank" rel="noopener noreferrer" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                GitHub Repo
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <!-- Project Header -->
+        <div class="text-center">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight text-dark-text">
+                End-to-End QA & <span class="text-primary">DevOps Pipeline</span>
+            </h1>
+            <p class="mt-4 text-lg max-w-3xl mx-auto text-sub-text">
+                A full-stack testing project demonstrating a complete CI/CD pipeline with UI, API, Contract, Performance, and Security testing layers.
+            </p>
+        </div>
+
+        <!-- Project Image -->
+        <div class="my-12">
+            <img src="https://testgrid.io/blog/wp-content/uploads/2024/06/playright-for-automation-testing.jpg" alt="Robotic arm in a lab, representing automation and precision engineering" class="w-full rounded-lg shadow-lg">
+        </div>
+
+        <!-- Project Details -->
+        <div class="bg-light-card p-8 md:p-12 rounded-lg shadow-md">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Left Column -->
+                <div class="md:col-span-2">
+                    <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Project Overview</h2>
+                    <p class="text-sub-text mb-4 leading-relaxed">
+                        This project showcases a complete, modern QA and DevOps pipeline built from the ground up. It intentionally separates the system-under-test into two components: a self-hosted, Dockerized **Express.js backend API** that I wrote, and an external, public **React frontend (TodoMVC)**. This separation allows for the demonstration of a full spectrum of SDET skills in isolation, proving capabilities across the entire testing pyramid.
+                    </p>
+                    <p class="text-sub-text mb-6 leading-relaxed">
+                        The entire lifecycle is automated via a comprehensive **GitHub Actions workflow**. On every pull request, the workflow builds the backend API into a Docker container, runs health checks, and then executes multiple layers of automated tests against it. This ensures that every change is automatically validated for correctness, performance, and security, providing a robust quality gate before any code is merged.
+                    </p>
+                    
+                    <h2 class="font-serif text-2xl font-bold mb-4 mt-8 text-dark-text">Key Features & Pipeline Stages</h2>
+                    <ul class="list-disc list-inside text-sub-text space-y-3">
+                        <li>
+                            <strong>UI Automation:</strong> Cross-browser UI tests written with Playwright and the Page Object Model (POM) run against the live TodoMVC React application, validating real-world user flows.
+                        </li>
+                        <li>
+                            <strong>API Functional Testing:</strong> A dedicated API test suite uses Playwright's built-in `request` context to directly test the containerized Express.js backend, asserting endpoint correctness and schema validation.
+                        </li>
+                        <li>
+                            <strong>Consumer-Driven Contract Testing:</strong> A Pact consumer test (using Jest) generates a contract, ensuring the API adheres to the JSON schema expected by its clients and preventing breaking changes.
+                        </li>
+                        <li>
+                            <strong>Performance Guard-Rail:</strong> A k6 smoke test applies a 30-second load to the API. The CI job automatically fails the build if the p(95) latency exceeds a 500ms threshold, enforcing a strict performance budget.
+                        </li>
+                        <li>
+                            <strong>Automated Security Scanning:</strong> An OWASP ZAP baseline scan is run against the live API within the CI pipeline. The build is blocked if any Medium or High-level vulnerabilities are discovered, embedding security directly into the development process.
+                        </li>
+                         <li>
+                            <strong>DevOps & Containerization:</strong> The project includes a multi-stage Dockerfile for a lean production image, and the GitHub Actions workflow manages the entire build, deployment, and testing process within a self-contained environment.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column (Sidebar) -->
+                <div class="md:col-span-1">
+                    <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Tools & Technologies</h2>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Playwright</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JavaScript</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Node.js</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Express.js</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Docker</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">GitHub Actions</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">k6</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pact</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">OWASP ZAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; Copyright <span id="year"></span>. Made by <a href="./index.html" class="text-primary hover:underline">Vijeth Patil</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

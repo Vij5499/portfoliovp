@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijeth Patil | SDET</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary': '#E14434', // Warm Coral
+                        'primary-dark': '#c93c2d', // Darker Coral
+                        'light-bg': '#F9F3EF', // Creamy White
+                        'light-card': '#ffffff', // White
+                        'section-bg': '#fdfaf7', // Slightly off-white for sections
+                        'dark-text': '#1B3C53', // Deep Navy
+                        'sub-text': '#456882', // Muted Blue-Gray
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic scrollbar styling for a light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D2C1B6; /* Soft Taupe */
+            border-radius: 10px;
+            border: 2px solid #e5e0d8;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #bcaaa4;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-dark-text font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-light-bg/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold text-xl text-white font-serif">
+                    <span>VP</span>
+                </div>
+                <span class="text-xl font-bold font-serif tracking-normal text-dark-text">VIJETH PATIL</span>
+            </a>
+            
+            <!-- Desktop Nav & Socials -->
+            <div class="hidden md:flex items-center space-x-8">
+                <nav class="flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-primary transition-colors duration-300">HOME</a>
+                    <a href="#about" class="hover:text-primary transition-colors duration-300">ABOUT</a>
+                    <a href="#projects" class="hover:text-primary transition-colors duration-300">PROJECTS</a>
+                    <a href="#resume" class="hover:text-primary transition-colors duration-300">RESUME</a>
+                    <a href="#contact" class="hover:text-primary transition-colors duration-300">CONTACT</a>
+                </nav>
+                <div class="border-l border-gray-300 h-6"></div>
+                <div class="flex space-x-4 items-center">
+                    <a href="https://www.linkedin.com/in/vijeth-patil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-sub-text hover:text-primary transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://github.com/Vij5499" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-sub-text hover:text-primary transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.82-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://discord.com/users/1207797584433778689" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-sub-text hover:text-primary transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.9821-1.5448 19.0887 19.0887 0 00-1.0478.8162c-2.3692-.6639-4.8227-.6639-7.192 0-.3393-.2836-.7086-.589-1.0478-.8162A19.7913 19.7913 0 003.683 4.3698C.5335 9.7361-.323 14.8743.0986 20.0203.1484 20.2113.2982 20.3807.4777 20.4562s.377-.0025.5165-.1373a17.936 17.936 0 002.9324-2.1143 16.929 16.929 0 00-1.0282-1.4688c-.0986-.1372-.0986-.3282 0-.4654.1484-.1899.3967-.2654.595-.1373 2.3692 1.4472 4.9412 2.2029 7.5907 2.2029s5.2215-.7557 7.5907-2.2029c.1983-.128.4466-.0525.595.1373.0986.1372.0986.3282 0 .4654a16.929 16.929 0 00-1.0282 1.4688 17.936 17.936 0 002.9324 2.1143c.1395.1348.3373.2138.5165.1373s.3293-.1449.3791-.336c.4216-5.146.5611-10.2844-2.5883-15.6505zM8.0209 15.6233c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421zm7.9582 0c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h10"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-light-bg border-t border-gray-200">
+            <a href="#home" class="block py-2 hover:text-primary transition-colors duration-300">HOME</a>
+            <a href="#about" class="block py-2 hover:text-primary transition-colors duration-300">ABOUT</a>
+            <a href="#projects" class="block py-2 hover:text-primary transition-colors duration-300">PROJECTS</a>
+            <a href="#resume" class="block py-2 hover:text-primary transition-colors duration-300">RESUME</a>
+            <a href="#contact" class="block py-2 hover:text-primary transition-colors duration-300">CONTACT</a>
+            <div class="border-t border-gray-200 my-4"></div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/vijeth-patil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-sub-text hover:text-primary transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="https://github.com/Vij5499" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-sub-text hover:text-primary transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.82-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="https://discord.com/users/1207797584433778689" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-sub-text hover:text-primary transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.9821-1.5448 19.0887 19.0887 0 00-1.0478.8162c-2.3692-.6639-4.8227-.6639-7.192 0-.3393-.2836-.7086-.589-1.0478-.8162A19.7913 19.7913 0 003.683 4.3698C.5335 9.7361-.323 14.8743.0986 20.0203.1484 20.2113.2982 20.3807.4777 20.4562s.377-.0025.5165-.1373a17.936 17.936 0 002.9324-2.1143 16.929 16.929 0 00-1.0282-1.4688c-.0986-.1372-.0986-.3282 0-.4654.1484-.1899.3967-.2654.595-.1373 2.3692 1.4472 4.9412 2.2029 7.5907 2.2029s5.2215-.7557 7.5907-2.2029c.1983-.128.4466-.0525.595.1373.0986.1372.0986.3282 0 .4654a16.929 16.929 0 00-1.0282 1.4688 17.936 17.936 0 002.9324 2.1143c.1395.1348.3373.2138.5165.1373s.3293-.1449.3791-.336c.4216-5.146.5611-10.2844-2.5883-15.6505zM8.0209 15.6233c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421zm7.9582 0c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                    <!-- Text Content -->
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-dark-text">
+                            Hi, I'm <span class="text-primary">Vijeth Patil</span>
+                        </h1>
+                        <p class="mt-6 text-lg md:text-xl max-w-xl mx-auto md:mx-0 text-sub-text">
+                            A Software Development Engineer in Test. I build robust testing strategies to ship high-quality software with confidence.
+                        </p>
+                        <a href="#projects" class="mt-12 inline-block bg-primary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
+                            View My Work
+                        </a>
+                    </div>
+                    <!-- Image -->
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=1920" alt="A modern, professional tech workspace" class="w-full h-auto rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
+                    About <span class="text-primary">Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-12"></div>
+                
+                <div class="grid md:grid-cols-5 gap-12 items-start">
+                    <div class="md:col-span-3">
+                        <h3 class="font-serif text-2xl font-bold mb-6 text-dark-text">Get to know me!</h3>
+                        <p class="text-sub-text mb-4 leading-relaxed">
+                            As an SDET, I'm passionate about building quality directly into the software lifecycle. With over two years of experience, I specialize in creating scalable automation frameworks that deliver real impact. At Accenture, my work with Python and Selenium <strong>reduced testing cycles by 60%</strong> and cut critical defect leakage by 13%.
+                        </p>
+                        <p class="text-sub-text mb-4 leading-relaxed">
+                            Beyond functional testing, I enjoy performance engineering and thrive on the challenge of identifying and resolving system bottlenecks. I'm a collaborative team player, dedicated to Agile principles and continuous improvement. You can see some of my work in the <a href="#projects" class="text-primary font-bold hover:underline">Projects section</a> below.
+                        </p>
+                        <p class="text-sub-text mb-8 leading-relaxed">
+                            I am actively looking for new opportunities to apply my skills in a challenging SDET or Test Automation role. If your team values a proactive approach to quality, I'd love to <a href="#contact" class="text-primary font-bold hover:underline">get in touch</a>!
+                        </p>
+                        <a href="#contact" class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-base uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="font-serif text-2xl font-bold mb-6 text-dark-text">My Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Python</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Java</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JavaScript</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">SQL</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Selenium</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Playwright</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">RestAssured</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JMeter & k6</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Docker</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">GitHub Actions</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">TestNG</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Maven</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pact</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">OWASP ZAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 bg-section-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
+                    Featured <span class="text-primary">Projects</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-16"></div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <!-- Project 1 -->
+                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600" alt="Playwright Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Full-Stack QA/DevOps Pipeline</h3>
+                            <p class="text-sub-text mb-6">
+                                A complete CI/CD pipeline featuring a containerized API tested with Playwright for UI, API, Contract, Performance, and Security layers.
+                            </p>
+                            <a href="./playwright-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                                Case Study
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600" alt="Selenium Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Selenium Test Framework</h3>
+                            <p class="text-sub-text mb-6">
+                                A comprehensive, data-driven UI and API test framework using Java, Selenium, TestNG, and RestAssured, fully integrated into a CI/CD pipeline.
+                            </p>
+                            <a href="./selenium-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                                Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-20 md:py-32">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">
+                    My <span class="text-primary">Resume</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-12"></div>
+                <p class="text-lg max-w-2xl mx-auto text-sub-text mb-12">
+                    You can view or download my resume by clicking the button below. It contains a more detailed look at my skills, experience, and education.
+                </p>
+                <a href="./resume.pdf" target="_blank" class="bg-primary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
+                    View Resume
+                </a>
+             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-section-bg">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">
+                    Contact <span class="text-primary">Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-12"></div>
+                <p class="text-lg max-w-2xl mx-auto text-sub-text mb-12">
+                    Feel free to get in touch! Whether you have a project in mind, a question, or just want to say hello, my inbox is always open. I'll get back to you as soon as possible.
+                </p>
+                <a href="mailto:vpatil29@asu.edu" class="bg-primary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
+                    Email Me
+                </a>
+             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-serif text-xl font-bold tracking-normal text-light-bg">VIJETH PATIL</h3>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        A Software Development Engineer in Test focused on building robust testing strategies to ship high-quality software with confidence.
+                    </p>
+                </div>
+                <div class="md:text-right">
+                    <h3 class="font-serif text-xl font-bold tracking-normal text-light-bg">Social</h3>
+                    <div class="flex mt-4 space-x-4 md:justify-end">
+                        <a href="https://www.linkedin.com/in/vijeth-patil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                        </a>
+                        <a href="https://github.com/Vij5499" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.82-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" clip-rule="evenodd"/></svg>
+                        </a>
+                        <a href="https://discord.com/users/1207797584433778689" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                           <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.9821-1.5448 19.0887 19.0887 0 00-1.0478.8162c-2.3692-.6639-4.8227-.6639-7.192 0-.3393-.2836-.7086-.589-1.0478-.8162A19.7913 19.7913 0 003.683 4.3698C.5335 9.7361-.323 14.8743.0986 20.0203.1484 20.2113.2982 20.3807.4777 20.4562s.377-.0025.5165-.1373a17.936 17.936 0 002.9324-2.1143 16.929 16.929 0 00-1.0282-1.4688c-.0986-.1372-.0986-.3282 0-.4654.1484-.1899.3967-.2654.595-.1373 2.3692 1.4472 4.9412 2.2029 7.5907 2.2029s5.2215-.7557 7.5907-2.2029c.1983-.128.4466-.0525.595.1373.0986.1372.0986.3282 0 .4654a16.929 16.929 0 00-1.0282 1.4688 17.936 17.936 0 002.9324 2.1143c.1395.1348.3373.2138.5165.1373s.3293-.1449.3791-.336c.4216-5.146.5611-10.2844-2.5883-15.6505zM8.0209 15.6233c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421zm7.9582 0c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-500 pt-8 text-center text-gray-400">
+                <p>&copy; Copyright <span id="year"></span>. Made by <a href="#" class="text-primary hover:underline">Vijeth Patil</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</ht
