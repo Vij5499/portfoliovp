@@ -19,6 +19,8 @@
                     colors: {
                         'primary': '#E14434', // Warm Coral
                         'primary-dark': '#c93c2d', // Darker Coral
+                        'secondary': '#456882', // Muted Blue-Gray
+                        'secondary-dark': '#1B3C53', // Deep Navy
                         'light-bg': '#F9F3EF', // Creamy White
                         'light-card': '#ffffff', // White
                         'section-bg': '#fdfaf7', // Slightly off-white for sections
@@ -64,8 +66,9 @@
                 <nav class="flex space-x-8 font-medium">
                     <a href="#home" class="hover:text-primary transition-colors duration-300">HOME</a>
                     <a href="#about" class="hover:text-primary transition-colors duration-300">ABOUT</a>
-                    <a href="#projects" class="hover:text-primary transition-colors duration-300">PROJECTS</a>
                     <a href="#resume" class="hover:text-primary transition-colors duration-300">RESUME</a>
+                    <a href="#experience" class="hover:text-primary transition-colors duration-300">EXPERIENCE</a>
+                    <a href="#projects" class="hover:text-primary transition-colors duration-300">PROJECTS</a>
                     <a href="#contact" class="hover:text-primary transition-colors duration-300">CONTACT</a>
                 </nav>
                 <div class="border-l border-gray-300 h-6"></div>
@@ -91,8 +94,9 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-light-bg border-t border-gray-200">
             <a href="#home" class="block py-2 hover:text-primary transition-colors duration-300">HOME</a>
             <a href="#about" class="block py-2 hover:text-primary transition-colors duration-300">ABOUT</a>
-            <a href="#projects" class="block py-2 hover:text-primary transition-colors duration-300">PROJECTS</a>
             <a href="#resume" class="block py-2 hover:text-primary transition-colors duration-300">RESUME</a>
+            <a href="#experience" class="block py-2 hover:text-primary transition-colors duration-300">EXPERIENCE</a>
+            <a href="#projects" class="block py-2 hover:text-primary transition-colors duration-300">PROJECTS</a>
             <a href="#contact" class="block py-2 hover:text-primary transition-colors duration-300">CONTACT</a>
             <div class="border-t border-gray-200 my-4"></div>
             <div class="flex justify-center space-x-6">
@@ -122,9 +126,14 @@
                         <p class="mt-6 text-lg md:text-xl max-w-xl mx-auto md:mx-0 text-sub-text">
                             A Software Development Engineer in Test. I build robust testing strategies to ship high-quality software with confidence.
                         </p>
-                        <a href="#projects" class="mt-12 inline-block bg-primary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
-                            View My Work
-                        </a>
+                        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#projects" class="bg-primary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-primary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-300/50">
+                                View My Work
+                            </a>
+                            <a href="#resume" class="bg-secondary text-white font-bold py-4 px-12 rounded-lg text-lg uppercase tracking-wide hover:bg-secondary-dark transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-blue-300/50">
+                                Resume
+                            </a>
+                        </div>
                     </div>
                     <!-- Image -->
                     <div class="md:w-1/2">
@@ -146,10 +155,10 @@
                     <div class="md:col-span-3">
                         <h3 class="font-serif text-2xl font-bold mb-6 text-dark-text">Get to know me!</h3>
                         <p class="text-sub-text mb-4 leading-relaxed">
-                            As an SDET, I'm passionate about building quality directly into the software lifecycle. With over two years of experience, I specialize in creating scalable automation frameworks that deliver real impact. At Accenture, my work with Python and Selenium <strong>reduced testing cycles by 60%</strong> and cut critical defect leakage by 13%.
+                            I am a Software Development Engineer in Test (SDET) currently pursuing my Master's degree in Information Technology at Arizona State University. With a foundation of over two years of professional experience at a global technology consultancy like <strong>Accenture</strong>, I specialize in building scalable automation frameworks that deliver tangible business impact.
                         </p>
                         <p class="text-sub-text mb-4 leading-relaxed">
-                            Beyond functional testing, I enjoy performance engineering and thrive on the challenge of identifying and resolving system bottlenecks. I'm a collaborative team player, dedicated to Agile principles and continuous improvement. You can see some of my work in the <a href="#projects" class="text-primary font-bold hover:underline">Projects section</a> below.
+                            Looking forward, I am keenly interested in the evolving challenges of testing AI/ML systems. I am focused on exploring strategies for data validation, identifying model bias, and ensuring the reliability of non-deterministic outputs, which I believe is the next frontier for quality engineering. Beyond functional testing, I enjoy performance engineering and thrive on the challenge of identifying and resolving system bottlenecks.
                         </p>
                         <p class="text-sub-text mb-8 leading-relaxed">
                             I am actively looking for new opportunities to apply my skills in a challenging SDET or Test Automation role. If your team values a proactive approach to quality, I'd love to <a href="#contact" class="text-primary font-bold hover:underline">get in touch</a>!
@@ -164,56 +173,17 @@
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Python</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Java</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JavaScript</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">SQL</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Appium</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Selenium</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Playwright</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">RestAssured</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pytest</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">TestNG</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JMeter & k6</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Docker</span>
                             <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">GitHub Actions</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">TestNG</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Maven</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pact</span>
-                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">OWASP ZAP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32 bg-section-bg">
-            <div class="container mx-auto px-6">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
-                    Featured <span class="text-primary">Projects</span>
-                </h2>
-                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-16"></div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                    <!-- Project 1 -->
-                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600" alt="Playwright Project" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Full-Stack QA/DevOps Pipeline</h3>
-                            <p class="text-sub-text mb-6">
-                                A complete CI/CD pipeline featuring a containerized API tested with Playwright for UI, API, Contract, Performance, and Security layers.
-                            </p>
-                            <a href="./playwright-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
-                                Case Study
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600" alt="Selenium Project" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Selenium Test Framework</h3>
-                            <p class="text-sub-text mb-6">
-                                A comprehensive, data-driven UI and API test framework using Java, Selenium, TestNG, and RestAssured, fully integrated into a CI/CD pipeline.
-                            </p>
-                            <a href="./selenium-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
-                                Case Study
-                            </a>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Jira</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Azure DevOps</span>
+                            <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">AWS & Azure</span>
                         </div>
                     </div>
                 </div>
@@ -221,7 +191,7 @@
         </section>
 
         <!-- Resume Section -->
-        <section id="resume" class="py-20 md:py-32">
+        <section id="resume" class="py-20 md:py-32 bg-section-bg">
              <div class="container mx-auto px-6 text-center">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">
                     My <span class="text-primary">Resume</span>
@@ -234,6 +204,141 @@
                     View Resume
                 </a>
              </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
+                    Work <span class="text-primary">Experience</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-16"></div>
+                <div class="max-w-3xl mx-auto space-y-12">
+                    <!-- Accenture -->
+                    <div class="bg-light-card p-8 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-2xl font-bold text-dark-text">Advanced App Engineering Associate</h3>
+                            <p class="text-primary font-semibold">Sept. 2021 – Dec. 2023</p>
+                        </div>
+                        <p class="text-sub-text font-medium mb-4">Accenture | Bengaluru, India</p>
+                        <ul class="list-disc list-inside text-sub-text space-y-2">
+                            <li>Architected and implemented a scalable, data-driven test automation framework using Selenium and TestNG, which reduced manual regression testing efforts by 30%.</li>
+                            <li>Spearheaded the creation of comprehensive test strategies for functional and regression testing cycles, leading to a 20% increase in pre-production defect detection.</li>
+                            <li>Led performance and load testing initiatives using JMeter, simulating peak user loads to identify and resolve critical system bottlenecks, resulting in a 40% improvement in application response time.</li>
+                        </ul>
+                    </div>
+                    <!-- Pequrel Microelectronic -->
+                    <div class="bg-light-card p-8 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-2xl font-bold text-dark-text">Software Development Intern</h3>
+                            <p class="text-primary font-semibold">Aug. 2020 - May 2021</p>
+                        </div>
+                        <p class="text-sub-text font-medium mb-4">Pequrel Microelectronic | Hubballi, India</p>
+                        <ul class="list-disc list-inside text-sub-text space-y-2">
+                            <li>Developed and deployed an intelligent traffic management system that dynamically adjusted signal timing based on real-time vehicle density, cutting average intersection wait times by up to 25%.</li>
+                            <li>Implemented and optimized a YOLOv3-based computer vision model for live vehicle tracking, achieving 95% detection accuracy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 md:py-32 bg-section-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
+                    Certifications & <span class="text-primary">Achievements</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-16"></div>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <!-- AWS ML Foundations -->
+                    <div class="bg-light-card p-6 rounded-lg shadow-md flex items-center space-x-6">
+                        <div class="flex-shrink-0">
+                            <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.602H7.926a3.375 3.375 0 00-3.285 2.602l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m15.457 0v3.832a.75.75 0 01-1.5 0V17.25m1.5 0v-3.832a.75.75 0 00-1.5 0V17.25m-12.457 0v3.832a.75.75 0 01-1.5 0V17.25m1.5 0v-3.832a.75.75 0 00-1.5 0V17.25" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-dark-text">AWS Academy: Machine Learning Foundations</h3>
+                            <p class="text-sub-text">Issued by AWS Academy - April 2025</p>
+                        </div>
+                    </div>
+                    <!-- AWS NLP -->
+                    <div class="bg-light-card p-6 rounded-lg shadow-md flex items-center space-x-6">
+                        <div class="flex-shrink-0">
+                            <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.664.257m-4.562 8.519a12.016 12.016 0 01-7.5 3.039m11.25-11.25c.878 2.25.523 4.841-1.062 6.752M15 21L-3 6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-dark-text">AWS Academy: Machine Learning for Natural Language Processing</h3>
+                            <p class="text-sub-text">Issued by AWS Academy - April 2025</p>
+                        </div>
+                    </div>
+                    <!-- ISTQB -->
+                    <div class="bg-light-card p-6 rounded-lg shadow-md flex items-center space-x-6">
+                        <div class="flex-shrink-0">
+                            <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-dark-text">ISTQB 4.0+ Foundation Cert Prep</h3>
+                            <p class="text-sub-text">Issued by LinkedIn Learning - July 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center tracking-tight">
+                    Featured <span class="text-primary">Projects</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4 mb-16"></div>
+
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                    <!-- Project 1: Mobile -->
+                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=600" alt="Mobile Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Mobile Test Framework</h3>
+                            <p class="text-sub-text mb-6">
+                                A complete Python, Appium, and Pytest framework for Android, featuring functional, negative, and non-functional tests.
+                            </p>
+                            <a href="./mobile-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                                Case Study
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2: Playwright -->
+                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600" alt="Playwright Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Full-Stack QA/DevOps Pipeline</h3>
+                            <p class="text-sub-text mb-6">
+                                A CI/CD pipeline with a containerized API tested with Playwright for UI, API, Contract, Performance, and Security layers.
+                            </p>
+                            <a href="./playwright-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                                Case Study
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 3: Selenium -->
+                    <div class="bg-light-card rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600" alt="Selenium Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold mb-3 text-dark-text">Selenium Test Framework</h3>
+                            <p class="text-sub-text mb-6">
+                                A data-driven UI and API test framework using Java, Selenium, TestNG, and RestAssured, fully integrated into a CI/CD pipeline.
+                            </p>
+                            <a href="./selenium-detail.html" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+                                Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
@@ -269,10 +374,10 @@
                         <a href="https://www.linkedin.com/in/vijeth-patil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-primary transition-colors duration-300">
                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
                         </a>
-                        <a href="https://github.com/Vij5499" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <a href="https://github.com/Vij5499" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-sub-text hover:text-primary transition-colors duration-300">
                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.82-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" clip-rule="evenodd"/></svg>
                         </a>
-                        <a href="https://discord.com/users/1207797584433778689" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <a href="https://discord.com/users/1207797584433778689" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-sub-text hover:text-primary transition-colors duration-300">
                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.9821-1.5448 19.0887 19.0887 0 00-1.0478.8162c-2.3692-.6639-4.8227-.6639-7.192 0-.3393-.2836-.7086-.589-1.0478-.8162A19.7913 19.7913 0 003.683 4.3698C.5335 9.7361-.323 14.8743.0986 20.0203.1484 20.2113.2982 20.3807.4777 20.4562s.377-.0025.5165-.1373a17.936 17.936 0 002.9324-2.1143 16.929 16.929 0 00-1.0282-1.4688c-.0986-.1372-.0986-.3282 0-.4654.1484-.1899.3967-.2654.595-.1373 2.3692 1.4472 4.9412 2.2029 7.5907 2.2029s5.2215-.7557 7.5907-2.2029c.1983-.128.4466-.0525.595.1373.0986.1372.0986.3282 0 .4654a16.929 16.929 0 00-1.0282 1.4688 17.936 17.936 0 002.9324 2.1143c.1395.1348.3373.2138.5165.1373s.3293-.1449.3791-.336c.4216-5.146.5611-10.2844-2.5883-15.6505zM8.0209 15.6233c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421zm7.9582 0c-1.1858 0-2.155-1.0857-2.155-2.421s.9692-2.421 2.155-2.421c1.1858 0 2.155 1.0857 2.155 2.421s-.9692 2.421-2.155 2.421z"/></svg>
                         </a>
                     </div>
@@ -304,4 +409,4 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
-</ht
+</html>

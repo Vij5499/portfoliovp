@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA/DevOps Pipeline Project | Vijeth Patil</title>
+    <title>Mobile Test Framework | Vijeth Patil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@
             <a href="./index.html" class="text-lg font-bold text-dark-text hover:text-primary transition-colors duration-300">
                 &larr; Back to Portfolio
             </a>
-            <a href="https://github.com/Vij5499/Playwright" target="_blank" rel="noopener noreferrer" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
+            <a href="https://github.com/Vij5499/sauce-demo-automation" target="_blank" rel="noopener noreferrer" class="bg-primary text-white font-bold py-2 px-6 rounded-lg text-sm uppercase tracking-wide hover:bg-primary-dark transition-colors duration-300">
                 GitHub Repo
             </a>
         </div>
@@ -65,16 +65,16 @@
         <!-- Project Header -->
         <div class="text-center">
             <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight text-dark-text">
-                End-to-End QA & <span class="text-primary">DevOps Pipeline</span>
+                Comprehensive Mobile <span class="text-primary">Test Framework</span>
             </h1>
             <p class="mt-4 text-lg max-w-3xl mx-auto text-sub-text">
-                A full-stack testing project demonstrating a complete CI/CD pipeline with UI, API, Contract, Performance, and Security testing layers.
+                A complete test automation suite for a native Android e-commerce application, built from the ground up with Python, Appium, and Pytest.
             </p>
         </div>
 
         <!-- Project Image -->
         <div class="my-12">
-            <img src="https://testgrid.io/blog/wp-content/uploads/2024/06/playright-for-automation-testing.jpg" alt="Robotic arm in a lab, representing automation and precision engineering" class="w-full rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1920" alt="A person holding a smartphone with a shopping app open" class="w-full rounded-lg shadow-lg">
         </div>
 
         <!-- Project Details -->
@@ -84,31 +84,36 @@
                 <div class="md:col-span-2">
                     <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Project Overview</h2>
                     <p class="text-sub-text mb-4 leading-relaxed">
-                        This project showcases a complete, modern QA and DevOps pipeline built from the ground up. It intentionally separates the system-under-test into two components: a self-hosted, Dockerized <strong>Express.js backend API</strong> that I wrote, and an external, public <strong>React frontend (TodoMVC)</strong>. This separation allows for the demonstration of a full spectrum of SDET skills in isolation, proving capabilities across the entire testing pyramid.
+                        This project is a robust, end-to-end mobile test automation framework designed to validate the quality of the Sauce Labs "My Demo App" for Android. The suite is built with a modern Python technology stack and follows industry best practices, including the Page Object Model (POM), to create a scalable and maintainable testing solution.
                     </p>
                     <p class="text-sub-text mb-6 leading-relaxed">
-                        The entire lifecycle is automated via a comprehensive <strong>GitHub Actions workflow</strong>. On every pull request, the workflow builds the backend API into a Docker container, runs health checks, and then executes multiple layers of automated tests against it. This ensures that every change is automatically validated for correctness, performance, and security, providing a robust quality gate before any code is merged.
+                        The framework goes beyond basic functional checks to include a comprehensive set of negative, edge-case, and non-functional tests. This holistic approach ensures not only that features work as expected, but also that the application is reliable, performant, and accessible. All test runs generate detailed, interactive HTML reports using the Allure Framework, providing clear visibility into test results and application quality.
                     </p>
                     
-                    <h2 class="font-serif text-2xl font-bold mb-4 mt-8 text-dark-text">Key Features & Pipeline Stages</h2>
+                    <h2 class="font-serif text-2xl font-bold mb-4 mt-8 text-dark-text">Key Features & Testing Scope</h2>
                     <ul class="list-disc list-inside text-sub-text space-y-3">
                         <li>
-                            <strong>UI Automation:</strong> Cross-browser UI tests written with Playwright and the Page Object Model (POM) run against the live TodoMVC React application, validating real-world user flows.
+                            <strong>Page Object Model (POM):</strong> The framework is architected with a clean separation of test logic and UI interaction, making it easy to update locators and maintain tests as the application evolves.
                         </li>
                         <li>
-                            <strong>API Functional Testing:</strong> A dedicated API test suite uses Playwright's built-in `request` context to directly test the containerized Express.js backend, asserting endpoint correctness and schema validation.
+                            <strong>Functional Test Coverage:</strong> Includes end-to-end tests for critical user flows such as user login, product sorting (ascending and descending), adding multiple items to the cart, and the complete checkout process.
                         </li>
                         <li>
-                            <strong>Consumer-Driven Contract Testing:</strong> A Pact consumer test (using Jest) generates a contract, ensuring the API adheres to the JSON schema expected by its clients and preventing breaking changes.
+                            <strong>Negative & Edge-Case Testing:</strong> Validates application robustness by testing scenarios like invalid login credentials, submitting empty forms, and attempting to check out with an empty cart.
                         </li>
                         <li>
-                            <strong>Performance Guard-Rail:</strong> A k6 smoke test applies a 30-second load to the API. The CI job automatically fails the build if the p(95) latency exceeds a 500ms threshold, enforcing a strict performance budget.
+                            <strong>Data Validation:</strong> A dedicated test verifies the accuracy of the shopping cart's total price calculation by adding multiple items and asserting the sum.
                         </li>
                         <li>
-                            <strong>Automated Security Scanning:</strong> An OWASP ZAP baseline scan is run against the live API within the CI pipeline. The build is blocked if any Medium or High-level vulnerabilities are discovered, embedding security directly into the development process.
+                            <strong>Non-Functional Testing:</strong>
+                            <ul class="list-['-_'] list-inside ml-4 mt-2 space-y-2">
+                                <li><strong>Performance:</strong> Measures application startup time to ensure it meets a defined performance threshold.</li>
+                                <li><strong>Accessibility:</strong> Verifies that key interactive elements have `content-description` labels for screen reader compatibility.</li>
+                                <li><strong>Reliability:</strong> Tests the app's ability to maintain state and user data after being sent to the background and reopened.</li>
+                            </ul>
                         </li>
-                         <li>
-                            <strong>DevOps & Containerization:</strong> The project includes a multi-stage Dockerfile for a lean production image, and the GitHub Actions workflow manages the entire build, deployment, and testing process within a self-contained environment.
+                        <li>
+                            <strong>Advanced Reporting:</strong> Integrated with the Allure Framework to produce detailed, interactive HTML reports that categorize test results and provide clear insights into failures.
                         </li>
                     </ul>
                 </div>
@@ -117,15 +122,13 @@
                 <div class="md:col-span-1">
                     <h2 class="font-serif text-2xl font-bold mb-4 text-dark-text">Tools & Technologies</h2>
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Playwright</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">JavaScript</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Node.js</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Express.js</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Docker</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">GitHub Actions</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">k6</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pact</span>
-                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">OWASP ZAP</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Python</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Appium</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Pytest</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Selenium WebDriver</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">UiAutomator2</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Allure Report</span>
+                        <span class="bg-gray-200 text-sub-text py-2 px-4 rounded-full font-medium">Page Object Model</span>
                     </div>
                 </div>
             </div>
